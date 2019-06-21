@@ -1,20 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:myview="http://schemas.android.com/apk/res-auto"
-
+    xmlns:sweep="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".ImageActivity">
 
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:maxHeight="3dp"
+        android:minHeight="3dp"
+       android:layout_above="@id/circleImg"
+        android:layout_marginBottom="30dp"
+
+        />
+
     <com.langfeng.view.CircleImageView
+        android:id="@+id/circleImg"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:src="@drawable/test"
         myview:shape_type="triangle"
 
         android:layout_centerInParent="true"
+        />
+
+    <com.langfeng.view.drawArcView
+        android:id="@+id/sweepArc"
+        android:layout_marginTop="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/circleImg"
+
+        android:layout_centerHorizontal="true"
         />
 
 </RelativeLayout>

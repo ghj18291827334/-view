@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="sweepAngle" format="float" />
+    <attr name="text" format="string" />
     <declare-styleable name="shapeimageview">
         <attr name="border_size" format="dimension" />
         <attr name="in_border_color" format="color" />
-        <attr name="out_border_color" format="color"/>
-        <attr name="shape_type" format="string"/>
+        <attr name="out_border_color" format="color" />
+        <attr name="shape_type" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="circleView">
+        <attr name="textSize" format="dimension" />
+        <attr name="text" />
+        <attr name="circleColor" format="color" />
+        <attr name="arcColor" format="color" />
+        <attr name="textColor" format="color" />
+        <attr name="startAngle" format="integer" />
+        <attr name="sweepAngle"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="TextViewPlus">
+        <attr name="sweepAngle"/>
+        <attr name="text" />
     </declare-styleable>
 
 </resources>
