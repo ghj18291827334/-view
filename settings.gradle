@@ -1,0 +1,3 @@
+include ':app', ':testspeed'
+include  ':view'
+include ':amm_sdk_sample'
