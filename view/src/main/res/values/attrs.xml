@@ -25,4 +25,9 @@
         <attr name="text" />
     </declare-styleable>
 
+    <declare-styleable name="Text2View">
+        <attr name="textEdit" format="string"/>
+        <attr name="textText" format="string"/>
+    </declare-styleable>
+
 </resources>

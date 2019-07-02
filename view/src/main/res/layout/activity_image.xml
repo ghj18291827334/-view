@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:myview="http://schemas.android.com/apk/res-auto"
+    xmlns:mobile="http://schemas.android.com/apk/res-auto"
     xmlns:sweep="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,14 +9,38 @@
 
     tools:context=".ImageActivity">
 
+    <com.langfeng.view.utils.TextAndEditText
+        android:id="@+id/testC"
+        mobile:textEdit="111"
+        mobile:textText="222sdjksndkasnkadkj"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@id/rxtext"
+        android:layout_marginBottom="10dp"
+        >
+
+    </com.langfeng.view.utils.TextAndEditText>
+
+
+    <com.langfeng.view.utils.ExEditText
+        android:id="@+id/rxtext"
+        imgRes="@drawable/arraw_up"
+        nullImgRes="@drawable/arraw_up"
+        android:layout_above="@id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true" />
+
+
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:layout_above="@id/circleImg"
+        android:layout_marginBottom="30dp"
+
         android:maxHeight="3dp"
         android:minHeight="3dp"
-       android:layout_above="@id/circleImg"
-        android:layout_marginBottom="30dp"
 
         />
 
@@ -23,20 +48,18 @@
         android:id="@+id/circleImg"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/test"
-        myview:shape_type="triangle"
-
         android:layout_centerInParent="true"
-        />
+        android:src="@drawable/test"
+
+        myview:shape_type="triangle" />
 
     <com.langfeng.view.drawArcView
         android:id="@+id/sweepArc"
-        android:layout_marginTop="20dp"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_below="@id/circleImg"
-
         android:layout_centerHorizontal="true"
-        />
+
+        android:layout_marginTop="20dp" />
 
 </RelativeLayout>

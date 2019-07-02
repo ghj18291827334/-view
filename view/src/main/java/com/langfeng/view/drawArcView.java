@@ -89,20 +89,23 @@ public class drawArcView extends View {
         /**
          * 因为drawArc(left,top,right,bottom,startAngle,sweepAngle,userCenter,paint)这个方法是level 21 才加入的，所以加入了版本判断
          */
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
-            canvas.drawArc(0, 0, width, height, 0, 270, false, paint); // 绘制弧形
-        }else{
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            canvas.drawArc(0, 0, width, height, 0, sweepAngle, false, paint); // 绘制弧形
+        } else {
             /**
              * 另外需要注意的是，对数据的处理不能放在构造方法里，因为还没有开始测量数据
              */
-            rectF=new RectF(0, 0, width, height);
-            canvas.drawArc(rectF,0, sweepAngle, false, paint);
+            rectF = new RectF(0, 0, width, height);
+            canvas.drawArc(rectF, 0, sweepAngle, false, paint);
         }
         paint.setColor(Color.RED);
-        canvas.drawCircle(width/2,height/2,radius-10,paint);
-        canvas.drawText(text+"%", width/2, height/2, paint);
-
+        canvas.drawCircle(width / 2, height / 2, radius - 10, paint);
+        canvas.drawText(text + "%", width / 2, height / 2, paint);
+        //亲测这俩个方法都可以进行页面的刷新
+        invalidate();
+        postInvalidate();
     }
+
 
 
 
